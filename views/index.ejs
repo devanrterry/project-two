@@ -6,7 +6,7 @@
   </head>
   <body>
       <% if (user) { %>
-        <a href="/logout">Log Out</a>
+        <a href="/logout">Logout <%= user.name %></a>
       <% } else { %>
         <a href="/auth/google">Login with Google</a>
       <% } %>
