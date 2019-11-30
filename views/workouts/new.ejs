@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+<h2>Add New Workout</h2>
+<h2>Enter a New Workout</h2>
+<form action="/workouts" method="POST">
+	<label>Date:
+	  <input type="date" name="date">
+	</label><br>
+	<label>Muscle Group(s):
+	  	  <select name="type">
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="biceps">Biceps</option>
+                <option value="triceps">Triceps</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="legs">Legs</option>
+           </select>
+	</label><br>
+	<label>Warm Up:
+	  <input type="text" name="warmup">
+	</label><br>
+	<label>Activities
+	  <input type="form" name="activities">
+	</label><br>
+	<input type="submit" value="Add Workout">
+</form>
+  </body>
+<%- include('partials/footer') %>

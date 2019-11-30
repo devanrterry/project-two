@@ -8,8 +8,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1 class='heading'>In2It Fit</h1>
+    <h1 class='heading'>Stay Sweating</h1>
     <nav>
+        <a href="/">Home</a>
+        <a href="/workouts/new">New Workout</a>
             <% if (user) { %>
                 <a href="/logout">Logout <%= user.name %></a>
               <% } else { %>

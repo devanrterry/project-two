@@ -16,7 +16,7 @@ var workoutSchema = new Schema({
     date: Date,
     type: String,
     warmup: String,
-    activity: [activitySchema]
+    activities: [activitySchema]
 });
 
 var userSchema = new Schema({
