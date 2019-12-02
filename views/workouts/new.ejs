@@ -1,12 +1,25 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1 class='heading'>Stay Sweaty!</h1>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
 <h2>Add New Workout</h2>
-<h2>Enter a New Workout</h2>
-<form action="/workouts" method="POST">
+<form class = "newworkoutform" action="/workouts" method="POST">
 	<label>Date:
 	  <input type="date" name="date">
 	</label><br>
 	<label>Muscle Group(s):
 	  	  <select name="type">
+                <option value="">-select muscle group-</option>
                 <option value="chest">Chest</option>
                 <option value="back">Back</option>
                 <option value="biceps">Biceps</option>
@@ -19,7 +32,7 @@
 	  <input type="text" name="warmup">
 	</label><br>
 	<label>Activities
-	  <input type="form" name="activities">
+	  <button type="form" name="activities">Add Activity</button>
 	</label><br>
 	<input type="submit" value="Add Workout">
 </form>
