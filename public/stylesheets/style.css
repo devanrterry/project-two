@@ -5,23 +5,37 @@
   padding-top: 4px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');
+  background-size: 1500px 1000px;
 }
 
 .heading {
   margin-top: 0;
   justify-content: space-evenly;
   text-align: center;
-  /* background: pink; */
+  background: white;
   color: black;
   font-size: 2rem;
+  display: inline-block;
+  border-radius: 5%;
+}
+
+h1 {
+  color: white;
 }
 
 a {
-  color: rgb(226, 250, 12);
+  color: white;
+  /* color: rgb(226, 250, 12); */
+}
+
+a:hover {
+  cursor: pointer;
+  color: white;
 }
 
 footer {
-  color: pink;
+  color: navy;
   position: absolute;
   bottom: 0;
   margin-bottom: 8px;
@@ -29,7 +43,6 @@ footer {
 
 body > nav {
   grid-area: nav;
-  background-color: rgb(4, 22, 124);
   display: flex;
   justify-content: space-evenly;
   align-items: left;
@@ -37,6 +50,6 @@ body > nav {
   font-size: 1.6rem;
 }
 
-.newworkoutform {
-  
-}
+/* .newworkoutform {
+
+} */

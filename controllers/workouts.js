@@ -1,27 +1,47 @@
-var Workout = require('../models/user');
+var User = require('../models/user');
 
 module.exports = {
     new: newWorkout,
     create,
-    index
+    index,
+    show,
+    delete: deleteWorkout
 }
 
-function index(req, res){
-    Workout.find({}, function(err, workouts){
-        res.render('../index', {workouts})
+function deleteWorkout(req, res){
+    Workout.findByIdAndDelete(req.params.id, function(err){
+      res.redirect('/workouts');
     });
 }
 
-function create(req, res){
-    let workout = new Workout(req.body);
-    workout.save(function(err,){
-     if (err) return res.render('workouts/new');
-        console.log(workout);
-        res.redirect('../');
-      });
-    };
+function show(req, res) {
+    User.findById(req.params.id, function (err, user) {
+        Workout.find({ workout: workout._id }, function (err, workout) {
+            res.render('workouts/show', { title: 'Workout Details', user, workouts });
+        });
+    });
+};
 
-function newWorkout(req, res){
-    res.render('workouts/new', { title: 'Add Workout' });
+function index(req, res) {
+    User.findById(req.user._id, function (err, user) {
+        console.log(user);
+        res.render('workouts/index', { workouts: user.workouts, title: "View Previous Workout", user: req.user })
+    });
+};
+
+function create(req, res) {
+    User.findById(req.user._id, function (err, user) {
+        user.workouts.push(req.body);
+        user.save(function (err) {
+            res.redirect('/workouts')
+        })
+    })
+};
+
+function newWorkout(req, res) {
+    res.render('workouts/new', {
+        title: 'Add Workout',
+        user: req.user
+    });
 };
 

@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h1><%= workout.type %> Workout on <%= workout.date %></h1>
+<section id="workoutinfo">
+    <div>Warm Up: </div>
+    <div><%= workout.warmup %></div><br>
+    <div>Activities: </div>
+    <% if(user.workouts.activities) { %>
+        <% user.workouts.activities.forEach(function(e){ %>
+            <div><h3><%= e.type %></h3></div><br>
+            <div><h4><%= e.name %></h4></div><br>
+            <div>Sets: <%= e.sets %></div><br>
+            <div>Reps: <%= e.reps %></div><br>
+            <div>Weight: <%= e.weight %></div><br>
+            <% }); %>
+        <% } else { %>
+            <h3>No Activities Added</h3>
+       <% }; %>
+</section>
+
+<%- include('../partials/footer') %>

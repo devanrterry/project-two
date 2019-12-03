@@ -3,7 +3,7 @@ var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Workout Tracker', user: req.user });
+  res.render('index', { title: 'Welcome!', user: req.user });
 });
 
  // Google OAuth login route
@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
  router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/',
+    successRedirect : '/workouts',
     failureRedirect : '/'
   }
 ));
