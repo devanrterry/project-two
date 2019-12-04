@@ -41,7 +41,7 @@ function show(req, res) {
         }
         res.render('workouts/show', {
             workout,
-            title: "<%= workout.type %> workout on <%= workout.date %>",
+            title: "",
             user: req.user
         });
     });

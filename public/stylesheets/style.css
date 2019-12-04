@@ -4,7 +4,7 @@
 
 body {
   padding-top: 4px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Amiko', sans-serif;
   text-align: center;
   background-image: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');
   background-size: 1500px 1000px;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-  color: white;
+  color: rgb(9, 30, 61);
 }
 
 /* .details:hover {
@@ -35,17 +35,21 @@ h1 {
   color: black;
 }
 
+.showheading {
+  font-weight: bold;
+}
+
 button:hover{
   cursor: pointer;
 }
 
 form {
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 50px;
 }
 
 nav > a {
-  color: white;
+  color: black;
   /* background-color: black; */
   display: inline-block;
   font-size: 1rem;
@@ -54,7 +58,9 @@ nav > a {
 }
 
 .opaque {
-  background-color: grey;
+  background-color: lightcyan;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .login {
@@ -68,8 +74,8 @@ nav > a {
 } */
 
 footer {
-  color: navy;
-  position: absolute;
+  color: white;
+  /* position: absolute; */
   bottom: 0;
   margin-bottom: 20px;
 }
@@ -80,6 +86,10 @@ body > nav {
   align-items: center;
   padding: 0 20px 0 30px;
   font-size: 1.4rem;
+}
+
+.addactivity:hover {
+  cursor: pointer;
 }
 
 #workoutlist {
