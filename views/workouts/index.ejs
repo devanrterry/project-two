@@ -1,22 +1,18 @@
 <%- include('../partials/header') %>
 <% if(user){ %>
-<% if (user.workouts.length) { %>
+<% if (workouts.length) { %>
     <table id = "workoutlist">
       <thead>
         <th>Date</th>
         <th>Type</th>
         <th>Details</th>
-        <th>Remove</th>
       </thead>
       <tbody>
       <% workouts.forEach(function(workout) { %>
         <tr>
           <td><%= workout.date %></td>
           <td><%= workout.type %></td>
-          <!-- <td><a href="/workouts/<%= workout._id %>">DETAILS</a></td>
-          <form action="/workouts/<%= workout._id %>?_method=DELETE", method="POST">
-            <td><button class= "button" type="delete">X</button></td>
-          </form> -->
+          <td class="details"><a href="/workouts/<%= workout._id %>">DETAILS</a></td>
         </tr>
       <% }) %>
       </tbody>
@@ -28,26 +24,4 @@
         <p>user is not logged in</p>
     <% }; %>
 
-
-
-
-
-
-<!-- <% if(user){ %>
-<% if(user.workouts.length) { %>
-<select id="previousworkouts">
-    <% user.workouts.forEach(function(e){ %>
-    <option value="previousworkouts"><%= e.date %></option>
-    <% }); %>
-</select>
-<% } else { %>
-<p>No Workouts Logged</p>
-<% } %>
-<% } else { %>
-    <p>user is not logged in</p>
-<% } %>
-<form action="/workouts/new">
-    <button id="newworkout">Add New Workout</button>
-</form>
-</body> -->
 <%- include('../partials/footer') %>

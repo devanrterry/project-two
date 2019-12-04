@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1 class='heading'> Stay Sweaty </h1>
+    <div class = opaque>
     <nav>
         <a href="/">Home</a>
         <a href="/workouts/new">New Workout</a>
-        <a href="/workouts">View Workouts</a>
+        <a href="/workouts/">View Workouts</a>
             <% if (user) { %>
                 <a href="/logout">Logout <%= user.name %></a>
               <% } else { %>

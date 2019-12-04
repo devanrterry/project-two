@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<form class = "editform" action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
+	<label>Date:
+	  <input type="text" name="date" value= <%= workout.date.toLocaleDateString() %>>
+	</label><br>
+	<label>Muscle Group(s):
+            <input type="text" name="type" value= <%= workout.type %>>
+	</label><br>
+	<label>Warm Up:
+	  <input type="text" name="warmup" value= <%= workout.warmup %>>
+	</label><br>
+	<input type="submit" value="Update Workout">
+</form>
+  </body>
+
+<%- include('../partials/footer') %>

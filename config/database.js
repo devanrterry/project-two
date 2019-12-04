@@ -3,7 +3,8 @@ let mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: true
   });
 
   let db = mongoose.connection;

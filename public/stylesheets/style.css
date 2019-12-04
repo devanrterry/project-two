@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
 }
-  body {
+
+body {
   padding-top: 4px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
@@ -13,26 +14,44 @@
   margin-top: 0;
   justify-content: space-evenly;
   text-align: center;
-  background: white;
-  color: black;
-  font-size: 2rem;
+  color: rgb(245, 202, 210);
+  font-size: 3.8rem;
   display: inline-block;
   border-radius: 5%;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
   color: white;
 }
 
-a {
+/* .details:hover {
+  font-size: 2rem;
+  color: pink;
+} */
+
+#edit {
+  background-color: white;
+  color: black;
+}
+
+nav > a {
   color: white;
+  /* background-color: black; */
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 10px;
   /* color: rgb(226, 250, 12); */
 }
 
-a:hover {
-  cursor: pointer;
-  color: white;
+.opaque {
+  background-color: grey;
 }
+
+/* .nav:hover {
+  cursor: pointer;
+  color: blue;
+} */
 
 footer {
   color: navy;
@@ -44,10 +63,15 @@ footer {
 body > nav {
   grid-area: nav;
   display: flex;
-  justify-content: space-evenly;
-  align-items: left;
+  align-items: center;
   padding: 0 20px 0 30px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+#workoutlist {
+  max-width: 800px;
+  height: fit-content;
+  margin: 50px auto;
 }
 
 /* .newworkoutform {
