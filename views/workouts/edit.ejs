@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <form class = "editform" action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
 	<label>Date:
-	  <input type="text" name="date" value="<%= workout.date.toLocaleDateString()" %>>
+	  <input type="text" name="date" value="<%= workout.date.toLocaleDateString() %>" >
 	</label><br>
 	<label>Muscle Group(s):
             <input type="text" name="type" value= <%= workout.type %>>

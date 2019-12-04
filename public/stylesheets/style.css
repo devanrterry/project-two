@@ -8,7 +8,6 @@ body {
   text-align: center;
   background-image: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');
   background-size: 1500px 1000px;
-
 }
 
 .heading {
@@ -21,14 +20,18 @@ body {
   font-family: 'Permanent Marker', cursive;
 }
 
-h1 {
-  color: rgb(9, 30, 61);
+.mainnav {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 5px solid black;
 }
 
-/* .details:hover {
-  font-size: 2rem;
-  color: pink;
-} */
+h1 {
+  color: rgb(9, 30, 61);
+  font-family: 'Permanent Marker', cursive;
+  text-decoration: underline;
+}
 
 #edit {
   background-color: white;
@@ -38,6 +41,11 @@ h1 {
 .showheading {
   font-weight: bold;
 }
+
+/* button {
+  font-size: 1.8rem;
+  font-weight: bold;
+} */
 
 button:hover{
   cursor: pointer;
@@ -52,15 +60,23 @@ nav > a {
   color: black;
   /* background-color: black; */
   display: inline-block;
-  font-size: 1rem;
-  margin: 0 10px;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: 'Permanent Marker', cursive;
   /* color: rgb(226, 250, 12); */
+}
+nav > a:hover {
+  color: pink;
+  /* font-size: 2rem; */
 }
 
 .opaque {
   background-color: lightcyan;
   max-width: 700px;
   margin: 0 auto;
+  padding: 20px;
+  margin-top: 10px;
 }
 
 .login {
@@ -88,6 +104,12 @@ body > nav {
   font-size: 1.4rem;
 }
 
+.addactivity {
+  font-size: 1rem;
+  background-color: black;
+  color: lightcyan;
+}
+
 .addactivity:hover {
   cursor: pointer;
 }
@@ -95,9 +117,13 @@ body > nav {
 #workoutlist {
   max-width: 800px;
   height: fit-content;
-  margin: 50px auto;
+  margin: 10px auto;
+  padding-bottom: 20px;
 }
 
+label {
+  margin-top: 10px;
+}
 /* .newworkoutform {
 
 } */

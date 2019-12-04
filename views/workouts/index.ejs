@@ -10,7 +10,7 @@
       <tbody>
       <% workouts.forEach(function(workout) { %>
         <tr>
-          <td><%= workout.date %></td>
+          <td><%= workout.date.toLocaleString() %></td>
           <td><%= workout.type %></td>
           <td class="details"><a href="/workouts/<%= workout._id %>">DETAILS</a></td>
         </tr>
