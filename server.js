@@ -12,6 +12,7 @@ require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var workoutsRouter = require('./routes/workouts');
+var activitiesRouter = require('./routes/activities');
 
 require('./config/database');
 require('./config/passport');
@@ -39,6 +40,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/workouts', workoutsRouter);
+app.use('/activities', activitiesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

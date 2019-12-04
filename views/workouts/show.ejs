@@ -1,10 +1,42 @@
 <%- include('../partials/header') %>
-<h1><%= workout.type %> Workout on <%= workout.date %></h1>
+<p><%= workout.type %> workout on <%= workout.date %></p>
 <section id="workoutinfo">
     <div>Warm Up: </div>
     <div><%= workout.warmup %></div><br>
-    
-
+    <% if (workout.activities.length) { %>
+        <h3>Activities</h3>
+        <table class="activities" align="center" border=2>
+                <thead>
+                  <th>Muscle Group</th>
+                  <th>Exercise</th>
+                  <th>Sets</th>
+                </thead>
+                <tbody>
+                  <% workout.activities.forEach(function(act) { %>
+                  <tr>
+                    <td><%= act.type %></td>
+                    <td><%= act.name %></td>
+                    <td><%= act.sets %></td>
+                  </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+              <% } else { %>
+              <p class="noactivities">No Activities Added</p>
+              <% } %>
+              <h4>Add Activity</h4>
+              <form id="add-activity-form" method="POST" action="/activities/<%= workout._id %>">
+                 <label>Muscle Group:
+                    <input type="text" name="type">
+                 </label><br>
+                <label>Exercise:
+                  <input type="text" name="name">
+                </label><br><br>
+                <label>Sets:
+                  <input type="text" name="sets">
+                </label><br><br>
+                <input type="submit" value="Add Activity"><br>
+              </form>
        <button><a href="<%= workout._id %>/edit">Edit Workout</a></button>
        <form action="/workouts/<%= workout._id %>?_method=DELETE", method="POST">
         <td><button type="delete">Delete Workout</button></td>

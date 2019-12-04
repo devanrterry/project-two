@@ -57,6 +57,11 @@ nav > a {
   background-color: grey;
 }
 
+.login {
+  font-size: 2rem;
+  color: white;
+}
+
 /* .nav:hover {
   cursor: pointer;
   color: blue;
@@ -66,7 +71,7 @@ footer {
   color: navy;
   position: absolute;
   bottom: 0;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 body > nav {

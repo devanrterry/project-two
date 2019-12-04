@@ -17,14 +17,13 @@ function edit(req, res) {
         workout,
         title: "Edit Workout",
         user: req.user
-        })
-    })
+        });
+    });
 }
 
 function update(req, res){
-    console.log(req.body);
     Workout.findByIdAndUpdate(req.params.id, req.body, (err, workout)=>{
-        res.redirect(`/workouts`);
+        res.redirect('/workouts');
     });
 }
 
@@ -42,7 +41,7 @@ function show(req, res) {
         }
         res.render('workouts/show', {
             workout,
-            title: "Previous Workouts",
+            title: "<%= workout.type %> workout on <%= workout.date %>",
             user: req.user
         });
     });
