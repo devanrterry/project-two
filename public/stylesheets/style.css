@@ -133,7 +133,8 @@ nav > a:hover {
 footer {
   color: white;
   /* background-color: rgba(255, 192, 203, 0.452); */
-  position: absolute;
+  position: fixed;
+  float: left;
   bottom: 0;
 }
 
