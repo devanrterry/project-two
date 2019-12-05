@@ -8,8 +8,8 @@ var activitySchema = new Schema({
         type: Number,
         max: 10
     },
-    reps: Number,
-    weight: Number
+    reps: String,
+    weight: String
 });
 
 var workoutSchema = new Schema({

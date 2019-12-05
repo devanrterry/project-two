@@ -7,7 +7,6 @@
         <h3>Activities</h3>
         <table class="activities" align="center" border=2>
                 <thead>
-                  <th>Muscle Group</th>
                   <th>Exercise</th>
                   <th>Sets</th>
                   <th>Reps</th>
@@ -16,7 +15,6 @@
                 <tbody>
                   <% workout.activities.forEach(function(act) { %>
                   <tr>
-                    <td><%= act.type %></td>
                     <td><%= act.name %></td>
                     <td><%= act.sets %></td>
                     <td><%= act.reps %></td>
@@ -30,9 +28,6 @@
               <% } %>
               <h4>Add Activity</h4>
               <form id="add-activity-form" method="POST" action="/activities/<%= workout._id %>">
-                 <label>Muscle Group:
-                    <input type="text" name="type">
-                 </label><br>
                 <label>Exercise:
                   <input type="text" name="name">
                 </label><br>
