@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 <form class = "newworkoutform" action="/workouts" method="POST">
 	<label>Date:
-	  <input type="date" name="date">
+	  <input class="newwktinput" type="date" name="date">
 	</label><br>
 	<label>Muscle Group(s):
-            <input type="text" name="type">
+      <input class="newwktinput" type="text" name="type">
 	</label><br>
 	<label>Warm Up:
-	  <input type="text" name="warmup">
+	  <input id="warmup" type="text" name="warmup">
 	</label><br>
 	<input type="submit" value="Add Workout">
 </form>
