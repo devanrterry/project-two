@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<h4 class="showheading"><%= workout.type %> workout on <%= workout.date.toLocaleString() %></h4>
+<h4 class="showheading"><%= workout.type %> workout on <%= workout.date.toLocaleDateString() %></h4>
 <section id="workoutinfo">
     <div class="showheading">Warm Up: </div>
     <div><%= workout.warmup %></div><br>
@@ -9,7 +9,7 @@
                 <thead>
                   <th>Exercise</th>
                   <th>Sets</th>
-                  <th>Reps</th>
+                  <th>Rep Sequence</th>
                   <th>Max Weight</th>
                 </thead>
                 <tbody>
@@ -27,14 +27,14 @@
               <p class="noactivities">No Activities Added</p>
               <% } %>
               <h4>Add Activity</h4>
-              <form id="add-activity-form" method="POST" action="/activities/<%= workout._id %>">
+              <form id="add-activity-form" autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
                 <label>Exercise:
                   <input type="text" name="name">
                 </label><br>
                 <label>Sets:
                   <input type="text" name="sets">
                 </label><br>
-                <label>Reps:
+                <label>Rep Sequence:
                   <input type="text" name="reps">
                 </label><br>
                 <label>Max Weight:

@@ -1,15 +1,22 @@
 <%- include('../partials/header') %>
-<form class = "newworkoutform" action="/workouts" method="POST">
-	<label>Date:
-	  <input class="newwktinput" type="date" name="date">
-	</label><br>
-	<label>Muscle Group(s):
-      <input class="newwktinput" type="text" name="type">
-	</label><br>
-	<label>Warm Up:
-	  <input id="warmup" type="text" name="warmup">
-	</label><br>
-	<input type="submit" value="Add Workout">
+<form class="newworkoutform" autocomplete="off" action="/workouts" method="POST">
+	<table style="margin: 0 auto;">
+		<tbody>
+			<tr>
+				<td class="form-label">Date:</td>
+				<td><input class="newwktinput" type="date" name="date"></td>
+			</tr>
+			<tr>
+				<td class="form-label">Muscle Group(s):</td>
+				<td><input class="newwktinput" type="text" name="type"></td>
+			</tr>
+			<tr>
+				<td class="form-label">Warm Up:</td>
+				<td><textarea id="warmup" type="text" name="warmup"></textarea></td>
+			</tr>
+		</tbody>
+	</table>
+	<input id= "newworkoutbutton" type="submit" value="Add Workout">
 </form>
-  </body>
-  <%- include('../partials/footer') %>
+</body>
+<%- include('../partials/footer') %>
