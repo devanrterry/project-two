@@ -1,18 +1,18 @@
 <%- include('../partials/header') %>
 <% if(user){ %>
 <% if (workouts.length) { %>
-    <table id = "workoutlist">
+    <table class="activities">
       <thead>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Details</th>
+        <th class="td">Date</th>
+        <th class="td">Type</th>
+        <th class="td">Details</th>
       </thead>
       <tbody>
       <% workouts.forEach(function(workout) { %>
         <tr>
-          <td><%= workout.date.toLocaleDateString() %></td>
-          <td><%= workout.type %></td>
-          <td class="details"><a href="/workouts/<%= workout._id %>">DETAILS</a></td>
+          <td class="td"><%= workout.date.toLocaleDateString() %></td>
+          <td class="td"><%= workout.type %></td>
+          <td class="td"><a id="details" href="/workouts/<%= workout._id %>">DETAILS</a></td>
         </tr>
       <% }) %>
       </tbody>

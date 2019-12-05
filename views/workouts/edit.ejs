@@ -1,16 +1,23 @@
 <%- include('../partials/header') %>
 <form class = "editform" action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
-	<label>Date:
-	  <input type="text" name="date" value="<%= workout.date.toLocaleDateString() %>" >
-	</label><br>
-	<label>Muscle Group(s):
-            <input type="text" name="type" value= <%= workout.type %>>
-	</label><br>
-	<label>Warm Up:
-	  <input type="text" name="warmup" value= <%= workout.warmup %>>
-	</label><br>
-	<input type="submit" value="Update Workout">
+	<table style="margin: 0 auto;">
+			<tbody>
+				<tr>
+					<td class="form-label">Date:</td>
+					<td><input class="newwktinput" type="text" name="date" value="<%= workout.date.toLocaleDateString() %>" ></td>
+				</tr>
+				<tr>
+					<td class="form-label">Muscle Group(s):</td>
+					<td><input class="newwktinput" type="text" name="type" value= <%= workout.type %>></td>
+				</tr>
+				<tr>
+					<td class="form-label">Warm Up:</td>
+					<td><textarea id="warmup" class="newwktinput" type="text" name="warmup" value= <%= workout.warmup %>></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+   <input class = "addactivity" type="submit" value="Update Workout">
 </form>
-  </body>
+</body>
 
 <%- include('../partials/footer') %>

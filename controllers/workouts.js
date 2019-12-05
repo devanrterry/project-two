@@ -33,7 +33,6 @@ function deleteWorkout(req, res) {
     });
 }
 
-
 function show(req, res) {
     Workout.findById(req.params.id, function(err, workout){
         if(err){
