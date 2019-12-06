@@ -111,7 +111,7 @@ nav > a {
 }
 
 nav > a:hover {
-  color: pink;
+  color: rgb(211, 130, 150);
 }
 
 .opaque {
@@ -180,6 +180,7 @@ label {
   width: 250px;
   margin: 10px;
   margin-bottom: 20px;
+  height: fit-content;
 }
 
 .newwktinput {
@@ -221,3 +222,17 @@ label {
 #details {
   color: white;
 }
+
+#prevworkouts {
+  width: 500px;
+}
+
+.editdelete {
+  font-size: 1rem;
+  background-color: black;
+  color: lightcyan;
+  margin-top: 15px;
+
+}
+
+

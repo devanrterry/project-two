@@ -23,7 +23,7 @@ function edit(req, res) {
 
 function update(req, res){
     Workout.findByIdAndUpdate(req.params.id, req.body, (err, workout)=>{
-        res.redirect('/workouts');
+        res.redirect(`/workouts/${workout._id}`);
     });
 }
 

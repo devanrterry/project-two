@@ -4,58 +4,60 @@
     <h2>Warm Up: </h2>
     <div><%= workout.warmup %></div><br>
     <% if (workout.activities.length) { %>
-        <h2>Activities</h2>
-        <table class="activities">
-                <thead>
-                  <th class="td">Exercise</th>
-                  <th class="td">Sets</th>
-                  <th class="td">Rep Sequence</th>
-                  <th class="td">Max Weight</th>
-                </thead>
+    <h2>Activities</h2>
+    <table class="activities">
+        <thead>
+            <th class="td">Exercise</th>
+            <th class="td">Sets</th>
+            <th class="td">Rep Sequence</th>
+            <th class="td">Max Weight</th>
+        </thead>
+        <tbody>
+            <% workout.activities.forEach(function(act) { %>
+            <tr>
+                <td class="td"><%= act.name %></td>
+                <td class="td"><%= act.sets %></td>
+                <td class="td"><%= act.reps %></td>
+                <td class="td"><%= act.weight %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <p class="noactivities">No Activities Added</p>
+    <% } %>
+    <div id="add-activity">
+        <h4>Add Activity</h4>
+        <form id="add-activity-form" autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
+            <table style="margin: 0 auto;">
                 <tbody>
-                  <% workout.activities.forEach(function(act) { %>
-                  <tr>
-                    <td class="td"><%= act.name %></td>
-                    <td class="td"><%= act.sets %></td>
-                    <td class="td"><%= act.reps %></td>
-                    <td class="td"><%= act.weight %></td>
-                  </tr>
-                  <% }); %>
+                    <tr>
+                        <td class="form-label">Exercise:</td>
+                        <td><input class="newwktinput" type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Sets:</td>
+                        <td><input class="newwktinput" type="text" name="sets"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Rep Sequence:</td>
+                        <td><input class="newwktinput" type="text" name="reps"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Max Weight:</td>
+                        <td><input class="newwktinput" type="text" name="weight"></td>
+                    </tr>
                 </tbody>
-              </table>
-              <% } else { %>
-              <p class="noactivities">No Activities Added</p>
-              <% } %>
-              <div id="add-activity">
-              <h4>Add Activity</h4>
-              <form id="add-activity-form" autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
-                <table style="margin: 0 auto;">
-                        <tbody>
-                            <tr>
-                                <td class="form-label">Exercise:</td>
-                                <td><input class="newwktinput" type="text" name="name"></td>
-                            </tr>
-                            <tr>
-                                <td class="form-label">Sets:</td>
-                                <td><input class="newwktinput" type="text" name="sets"></td>
-                            </tr>
-                            <tr>
-                                <td class="form-label">Rep Sequence:</td>
-                                <td><input class="newwktinput" type="text" name="reps"></td>
-                            </tr>
-                            <tr>
-                                <td class="form-label">Max Weight:</td>
-                                <td><input class="newwktinput" type="text" name="weight"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <input class="addactivity" type="submit" value="Add Activity"><br>
-              </form>
-            </div>
-       <button class="addactivity"><a id="editbutton" href="<%= workout._id %>/edit">Edit Workout</a></button>
-       <form action="/workouts/<%= workout._id %>?_method=DELETE", method="POST">
-        <td><button class="addactivity"type="delete">Delete Workout</button></td>
+            </table>
+            <input class="addactivity" type="submit" value="Add Activity"><br>
         </form>
+    </div>
+    <div class='container'>
+        <button class="editdelete"><a id="editbutton" href="<%= workout._id %>/edit">Edit Workout</a></button>
+        <form action="/workouts/<%= workout._id %>?_method=DELETE" , method="POST">
+            <td><button class="editdelete" type="delete">Delete Workout</button></td>
+        </form>
+    </div>
 </section>
 
 <%- include('../partials/footer') %>
