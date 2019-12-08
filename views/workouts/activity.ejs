@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+<div id="add-activity">
+        <h4>Add Activity</h4>
+        <form  autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
+            <table id="add-activity-form" >
+                <tbody>
+                    <tr>
+                        <td class="form-label">Exercise:</td>
+                        <td><input class="newwktinput" type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Sets:</td>
+                        <td><input class="newwktinput" type="text" name="sets"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Rep Sequence:</td>
+                        <td><input class="newwktinput" type="text" name="reps"></td>
+                    </tr>
+                    <tr>
+                        <td class="form-label">Max Weight:</td>
+                        <td><input class="newwktinput" type="text" name="weight"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input class="btn btn-primary btn-xl" id="details" type="submit" value="Add Activity"><br>
+        </form>
+    </div>

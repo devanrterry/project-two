@@ -1,12 +1,12 @@
 <%- include('../partials/header') %>
-<h4 class="showheading"><%= workout.type %> workout on <%= workout.date.toLocaleDateString() %></h4>
+<h4 class="showheading"><%= workout.type %>  <%= workout.date.toLocaleDateString() %></h4>
 <section id="workoutinfo">
     <h2>Warm Up: </h2>
     <div><%= workout.warmup %></div><br>
     <% if (workout.activities.length) { %>
     <h2>Activities</h2>
     <table class="activities">
-        <thead>
+        <thead class="thead">
             <th class="tdhead">Exercise</th>
             <th class="tdhead">Sets</th>
             <th class="tdhead">Rep Sequence</th>
@@ -28,8 +28,8 @@
     <% } %>
     <div id="add-activity">
         <h4>Add Activity</h4>
-        <form id="add-activity-form" autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
-            <table style="margin: 0 auto;">
+        <form  autocomplete="off" method="POST" action="/activities/<%= workout._id %>">
+            <table id="add-activity-form" >
                 <tbody>
                     <tr>
                         <td class="form-label">Exercise:</td>
@@ -49,13 +49,14 @@
                     </tr>
                 </tbody>
             </table>
-            <input class="addactivity" type="submit" value="Add Activity"><br>
+            <input class="btn btn-primary btn-xl" id="details" type="submit" value="Add Activity"><br>
         </form>
     </div>
     <div class='container'>
-        <button class="editdelete"><a id="editbutton" href="<%= workout._id %>/edit">Edit Workout</a></button>
+        <a class="btn btn-primary btn-xl" id="details" href="<%= workout._id %>/activity">Add Activity</a>
+       <a class="btn btn-primary btn-xl" id="details" href="<%= workout._id %>/edit">Edit Workout</a>
         <form action="/workouts/<%= workout._id %>?_method=DELETE" , method="POST">
-            <td><button class="editdelete" type="delete">Delete Workout</button></td>
+            <td><button class="btn btn-primary btn-xl" id="details" type="delete">Delete Workout</button></td>
         </form>
     </div>
 </section>

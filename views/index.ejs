@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One|Archivo+Black|Amiko|Montserrat&display=swap" rel="stylesheet">
 </head>
 <body id="bodyone">
 
-    <h1 class='heading'> Stay Sweaty </h1>
+    <h1 class='heading'> L I F T E D </h1>
     <div class = opaque>
-    <h1 id="logintitle">Let's Get Sweating!</h1>
+    <h1 id="logintitle">Welcome!</h1>
     <div class="login">
     <% if (user) { %>
-      <a class="login" href="/logout">Logout <%= user.name %></a>
+      <a href="/logout" id="login" class="btn btn-primary btn-xl" role="button">Logout <%= user.name %></a>
     <% } else { %>
-      <a class="login" href="/auth/google">Login with Google</a>
+      <a href="/auth/google" id="login" class="btn btn-primary btn-xl" role="button">Login with Google</a>
     <% } %>
   </div>
 </div>

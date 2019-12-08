@@ -36,7 +36,7 @@ function deleteWorkout(req, res) {
 function show(req, res) {
     Workout.findById(req.params.id, function(err, workout){
         if(err){
-            console.log(err); return;
+         return;
         }
         res.render('workouts/show', {
             workout,
@@ -48,8 +48,7 @@ function show(req, res) {
 
 function index(req, res) {
     Workout.find({user: req.user._id}, function(err, workouts) {
-        console.log(workouts);
-        if (err){ console.log(err); return; }
+        if (err){ return; }
         res.render('workouts/index', {user: req.user, title: "My Workouts", workouts})
     }); 
 };
@@ -59,8 +58,7 @@ function create(req, res) {
     let workout = new Workout(req.body);
     workout.save(function(err){
         if(err){
-            console.log(err);
-            return;
+          return;
         }
         res.redirect('/workouts');
     });
