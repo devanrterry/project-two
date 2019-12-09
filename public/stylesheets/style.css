@@ -29,7 +29,7 @@ body {
 
 #login:hover {
   font-family: 'Montserrat', sans-serif;
-  color: pink;
+  color: white;
   background-color: black;
   margin: 50px;
   border: none;
@@ -39,19 +39,22 @@ body {
   margin-top: 30px;
   justify-content: space-evenly;
   text-align: center;
-  color: rgba(245, 202, 210);
+  color: rgb(214, 218, 10);
+  /* color: rgba(245, 202, 210); */
   font-size: 3.8rem;
   display: inline-block;
   font-family: 'Archivo Black', sans-serif;
   text-decoration: none;
-  background-color: rgba(63, 61, 61, 0.767);
+  background-color: rgba(3, 27, 136, 0.767);
   border: 20px rgba(224, 255, 255);
   padding: 0 20px 0 20px;
   border-radius: 20px;
 }
 
 .mainnav {
-  background-color: rgba(63, 61, 61, 0.767);
+
+  /* background-color: rgba(63, 61, 61, 0.767); */
+  background-color: rgba(3, 27, 136, 0.767);
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 10px;
@@ -74,21 +77,6 @@ h1 {
   font-size: 2rem;
   text-decoration: underline;
 }
-
-/* #editbutton {
-  text-decoration: none;
-  color: lightcyan;
-} */
-
-/* #showheadwarmup {
-  font-size: 1.5rem;
-  font-weight: bold;
-} */
-
-/* button {
-  font-size: 1.8rem;
-  font-weight: bold;
-} */
 
 button:hover{
   cursor: pointer;
@@ -261,7 +249,8 @@ label {
 
 #nav {
   font-family: 'Montserrat', sans-serif;
-  color: rgba(245, 202, 210);
+  color: rgb(214, 218, 10);
+  /* color: rgba(245, 202, 210); */
   background: none;
   border: none;
   font-size: 1.6rem;
