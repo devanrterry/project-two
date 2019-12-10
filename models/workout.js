@@ -4,10 +4,7 @@ var Schema = mongoose.Schema;
 var activitySchema = new Schema({
     type: String,
     name: String,
-    sets: {
-        type: Number,
-        max: 10
-    },
+    sets: String,
     reps: String,
     weight: String
 });
