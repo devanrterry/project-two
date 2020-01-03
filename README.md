@@ -20,7 +20,7 @@ If so, Stay Sweaty is designed for you. This app provides a simple, minimalistic
 
 **Languages Used:** HTML, CSS, Javascript, Node.js, Express, Mongoose, MongoDB
 
-**link to app** https://stay-sweaty.herokuapp.com/
+**link to app** https://liftedapp.herokuapp.com/
 
 ### Instructions: 
 
