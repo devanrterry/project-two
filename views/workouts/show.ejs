@@ -49,14 +49,14 @@
                     </tr>
                 </tbody>
             </table>
-            <input class="btn btn-primary btn-xl" id="details" type="submit" value="Add Activity"><br>
+            <input class="btn btn-primary btn-xl details"  type="submit" value="Add Activity"><br>
         </form>
     </div>
     <div class='container'>
         <!-- <a class="btn btn-primary btn-xl" id="details" href="<%= workout._id %>/activity">Add Activity</a> -->
-       <a class="btn btn-primary btn-xl" id="details" href="<%= workout._id %>/edit">Edit Workout</a>
+       <a class="btn btn-primary btn-xl details" href="<%= workout._id %>/edit">Edit Workout</a>
         <form action="/workouts/<%= workout._id %>?_method=DELETE" , method="POST">
-            <td><button class="btn btn-primary btn-xl" id="details" type="delete">Delete Workout</button></td>
+            <td><button class="btn btn-primary btn-xl details"  type="delete">Delete Workout</button></td>
         </form>
     </div>
 </section>

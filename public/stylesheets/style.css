@@ -211,14 +211,14 @@ label {
   color:  rgb(240, 228, 230);
 }
 
-#details {
+.details {
   color: rgb(63, 61, 61);
   background-color: rgb(214, 218, 10);
   border: none;
   font-weight: bold;
 }
 
-#details:hover {
+.details:hover {
   color: white;
   background-color: black;
 }
