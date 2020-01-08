@@ -41,10 +41,8 @@ body {
   margin-top:0;
   margin-left: 10px;
   justify-content: space-evenly;
-  /* text-align: center; */
   color: rgb(214, 218, 10);
   font-size: 3.8rem;
-  /* display: inline-block; */
   font-family: 'Audiowide', cursive;
   text-decoration: none;
   background-color: rgba(3, 27, 136, 0.767);
@@ -63,9 +61,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* h1 {
-  font-family: 'Montserrat', sans-serif;
-} */
  
 #edit {
   background-color: white;
@@ -104,7 +99,6 @@ nav > a:hover {
 
 .opaque {
   background-color: rgba(63, 61, 61, 0.767);
-  /* background-color: rgba(255, 255, 255, 0.932); */
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
