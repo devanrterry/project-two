@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-<h4 class="showheading"><%= workout.type %>  <%= workout.date.toLocaleDateString() %></h4>
-<section id="workoutinfo">
+<h4 class="showheading fade-in"><%= workout.type %>  <%= workout.date.toLocaleDateString() %></h4>
+<section class ="fade-in" id="workoutinfo">
     <h2>Warm Up: </h2>
     <div><%= workout.warmup %></div><br>
     <% if (workout.activities.length) { %>
