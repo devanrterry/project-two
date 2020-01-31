@@ -38,7 +38,7 @@ body {
 }
 
 .heading {
-  margin-top:0;
+  margin-top:10px;
   margin-left: 10px;
   justify-content: space-evenly;
   color: rgb(214, 218, 10);
